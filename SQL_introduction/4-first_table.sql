@@ -1,4 +1,3 @@
 --THIS SCRIPT CREATE A NEW TABLE(first_table)
-CREATE TABLE IF NOT EXISTS first_table
-id INT PRIMARY KEY
-name VARCHAR(256)
+#!/bin/bash
+mysql -uroot -p -e "USE $1; CREATE TABLE IF NOT EXISTS first_table (id INT, name VARCHAR(256));"
