@@ -1,6 +1,4 @@
--- a script that displays the number of records with id 
-
-
-SELECT COUNT(*) AS count_of_records
-FROM hbtn_0c_0.first_table
+-- Count the number of records with id = 89 in first_table
+SELECT COUNT(*) AS num_records_with_id_89
+FROM first_table
 WHERE id = 89;
