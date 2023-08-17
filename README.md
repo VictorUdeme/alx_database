@@ -1,1 +1,1 @@
-This is the readme file for mysql Database project.
+This is the README file for Database(MySQL) project
