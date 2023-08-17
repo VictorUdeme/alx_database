@@ -1,4 +1,9 @@
---This script prints the full description of the first table
-#!/bin/bash
-mysql -uroot -p -e "USE $1; SELECT COLUMN_NAME, COLUMN_TYPE, IS_NULLABLE, COLUMN_KEY, COLUMN_DEFAULT, EXTRA FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='first_table';"
+-- Define the database and table names
+SET @db_name := 'hbtn_0c_0';
+SET @table_name := 'first_table';
+
+-- Print the full description of the table
+SELECT COLUMN_NAME, COLUMN_TYPE, IS_NULLABLE, COLUMN_DEFAULT, COLUMN_KEY, EXTRA
+FROM information_schema.COLUMNS
+WHERE TABLE_SCHEMA = @db_name AND TABLE_NAME = @table_name;
 
