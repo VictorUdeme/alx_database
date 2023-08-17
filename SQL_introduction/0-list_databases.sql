@@ -5,4 +5,3 @@ import mysql.connector
 
 #!/bin/bash
 mysql -uroot -p -e "SHOW DATABASES;"
-
