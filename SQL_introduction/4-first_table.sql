@@ -1,6 +1,5 @@
---THIS SCRIPT CREATE A NEW TABLE(first_table)
-import mysql.connector
-
-CREATE TABLE IF NOT EXISTS first_table
-id INT PRIMARY KEY
-name VARCHAR(256)
+-- Create table first_table if it doesn't exist
+CREATE TABLE IF NOT EXISTS first_table (
+    id INT,
+    name VARCHAR(256)
+);
