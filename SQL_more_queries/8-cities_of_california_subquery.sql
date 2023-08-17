@@ -2,7 +2,7 @@
 -- Results display: cities.id - cities.name
 -- Results are sorted in ascending order by cities.id.
 
-SELECT cities.name
+SELECT cities.id, cities.name
 FROM cities
 WHERE cities.state_id IN (
   SELECT states.id
@@ -10,5 +10,6 @@ WHERE cities.state_id IN (
   WHERE states.name = 'California'
 )
 ORDER BY cities.id;
+
 
 
