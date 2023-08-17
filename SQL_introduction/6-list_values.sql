@@ -1,2 +1,6 @@
---This script that lists all rows of the table first_table from the database hbtn_0c_0
-mysql -u <username> -p -e "SELECT * FROM hbtn_0c_0.first_table;"
+-- Use the specified database
+USE hbtn_0c_0;
+
+-- List all rows of the first_table
+SELECT * FROM first_table;
+
