@@ -1,4 +1,2 @@
---This script shows the list of table
-import mysql.connector
-
+-- List all tables in the "mysql" database
 SHOW TABLES FROM mysql;
