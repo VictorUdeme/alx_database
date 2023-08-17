@@ -7,6 +7,8 @@ USE hbtn_0d_usa;
 SELECT 
     c.id AS city_id,
     c.name AS city_name,
-    (SELECT s.name FROM states s WHERE s.id = c.state_id) AS state_name
+    s.name AS state_name
 FROM cities c
+CROSS JOIN states s
+WHERE c.state_id = s.id
 ORDER BY c.id ASC;
