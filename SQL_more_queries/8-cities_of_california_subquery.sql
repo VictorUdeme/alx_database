@@ -2,12 +2,13 @@
 -- Results display: cities.id - cities.name
 -- Results are sorted in ascending order by cities.id.
 
-USE hbtn_0d_usa;
+SELECT cities.name
+FROM cities
+WHERE cities.state_id IN (
+  SELECT states.id
+  FROM states
+  WHERE states.name = 'California'
+)
+ORDER BY cities.id;
 
-SELECT
-    c.id,
-    c.name
-FROM cities c, states s
-WHERE c.state_id = s.id AND s.name = 'California'
-ORDER BY c.id ASC;
 
